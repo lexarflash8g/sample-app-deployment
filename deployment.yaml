@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: sample-app
 spec:
-  replicas: 1
+  replicas: 3
   revisionHistoryLimit: 3
   selector:
     matchLabels:
@@ -14,9 +14,11 @@ spec:
         app: sample-app
     spec:
       containers:
-      - command:
-        - /app/sample-app
-        image: gitopsbook/sample-app:v0.1
+      - image: gitopsbook/sample-app:v0.1
         name: sample-app
+        command:
+          - /app/sample-app
         ports:
         - containerPort: 8080
+      securityContext:
+        runAsNonRoot: true
