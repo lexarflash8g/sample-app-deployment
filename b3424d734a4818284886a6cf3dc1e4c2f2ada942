@@ -1,0 +1,1 @@
+{"jobID":"cdda9197-1e94-6d86-cd83-67b3ce7bc133","spec":{"type":"policy","cause":{"Message":"","User":"Nvidia Nvidia \u003cnvidia997g@gmail.com\u003e"},"spec":{"default:deployment/sample-app":{"add":{"automated":"true"},"remove":{}}}},"result":null}
